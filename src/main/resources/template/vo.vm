@@ -1,0 +1,24 @@
+package ${namespace};
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+* ${this-table.TABLE_COMMENT}
+*
+* @author ${author}
+* @date ${create-time}
+*/
+@Data
+@EqualsAndHashCode
+public class ${Model-Name}VO {
+#foreach ($n in $this-table.COLUMNS_INFO)
+        /**
+        * $n.COLUMN_COMMENT
+        */
+    private $n.TYPE $n.NAME;
+
+#end
+}

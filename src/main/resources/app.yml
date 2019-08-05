@@ -1,0 +1,74 @@
+base-namespace: me.aphage.aqua
+java-out: main/java/me/aphage/aqua
+resoutces-out: main/resoutces
+
+out: /out/template.zip
+
+table-prefix:
+columns-prefix:
+
+templates:
+  - namespace: ${base-namespace}.dao
+    template: /template/mapper_xml.vm
+    out: ${resoutces-out}/#{Model-Name}Mapper.xml
+
+  - namespace: ${base-namespace}.dao
+    template: /template/dao.vm
+    out: ${java-out}/dao/#{Model-Name}Dao.java
+
+  - namespace: ${base-namespace}.service
+    template: /template/service.vm
+    out: ${java-out}/service/#{Model-Name}Service.java
+
+  - namespace: ${base-namespace}.service.impl
+    template: /template/service_impl.vm
+    out: ${java-out}/service/impl/#{Model-Name}ServiceImpl.java
+
+  - namespace: ${base-namespace}.model
+    template: /template/model.vm
+    out: ${java-out}/model/#{Model-Name}.java
+
+  - namespace: ${base-namespace}.vo
+    template: /template/vo.vm
+    out: ${java-out}/vo/#{Model-Name}VO.java
+
+  - namespace: ${base-namespace}.controller
+    template: /template/controller.vm
+    out: ${java-out}/controller/#{Model-Name}Controller.java
+
+data-type:
+  bit: Byte
+  ubit: Short
+
+  tinyint: Byte
+  utinyint: Short
+
+  smallint: Short
+  usmallint: Integer
+
+  mediumint: Integer
+  umediumint: Long
+
+  int: Integer
+  uint: Long
+
+  bigint: Long
+  ubigint: java.math.BigInteger
+
+  float: Float
+  double: Double
+  decimal: java.math.BigDecimal
+
+  char: Character
+  varchar: String
+  tinytext: String
+  text: String
+  mediumtext: String
+  longtext: String
+
+  date: java.sql.Date
+  datetime: java.sql.Timestamp
+  timestamp: java.sql.Timestamp
+  time: java.sql.Time
+
+author: auto generator

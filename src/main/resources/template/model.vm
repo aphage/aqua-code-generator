@@ -1,0 +1,28 @@
+package ${namespace};
+
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+/**
+* ${this-table.TABLE_COMMENT}
+*
+* @author ${author}
+* @date ${create-time}
+*/
+@Data
+@EqualsAndHashCode
+@TableName("${this-table.TABLE_NAME}")
+public class ${Model-Name} {
+#foreach ($n in $this-table.COLUMNS_INFO)
+        /**
+         * $n.COLUMN_COMMENT
+        */
+    #if($this-table.KEY_INFO.COLUMN_NAME == $n.COLUMN_NAME)
+    @TableId
+    #end
+    private $n.TYPE $n.NAME;
+
+#end
+}

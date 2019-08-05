@@ -1,0 +1,10 @@
+package ${namespace};
+
+/**
+* ${this-table.TABLE_COMMENT}
+*
+* @author ${author}
+* @date ${create_time}
+*/
+public interface ${Model-Name}Service{
+}

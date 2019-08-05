@@ -1,0 +1,18 @@
+import ${namespace};
+
+import ${base-namespace}.service.${Model-Name}Service;
+import lombok.extern.slf4j.Slf4j;
+
+/**
+* ${this-table.TABLE_COMMENT}
+*
+* @author ${author}
+* @date ${create-time}
+*/
+@Slf4j
+@RestController("/${model-name}")
+public class ${Model-Name}Controller {
+    @Autowired
+    private ${Model-Name}Service service;
+
+}

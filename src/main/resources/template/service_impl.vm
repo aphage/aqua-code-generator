@@ -1,0 +1,18 @@
+package ${namespace};
+
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import ${base-namespace}.model.${Model-Name};
+import lombok.extern.slf4j.Slf4j;
+
+/**
+* ${this-table.TABLE_COMMENT}
+*
+* @author ${author}
+* @date ${create-time}
+*/
+@Slf4j
+@Service
+public class ${Model-Name}ServiceImpl extends extends ServiceImpl<${Model-Name}Dao, ${Model-Name}> implements IService<${Model-Name}> ,${Model-Name}Service {
+
+}
